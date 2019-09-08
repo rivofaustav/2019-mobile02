@@ -34,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
 	public void handleGuess(View view) {
 		// TODO: Tambahkan logika untuk melakukan pengecekan angka
+        String angka = numberInput.getText().toString();
+        int input = Integer.parseInt(angka);
+
+        if(input == number){
+            Toast.makeText(this, "Angka Benar!", Toast.LENGTH_SHORT).show();
+        }
+        else if(input < number ){
+            Toast.makeText(this, "Angka Terlalu Kecil!", Toast.LENGTH_SHORT).show();
+        }
+        else if(input > number){
+            Toast.makeText(this, "Angka Tebakan Besar", Toast.LENGTH_SHORT).show();
+        }
 	}
 
 	public void handleReset(View view) {
