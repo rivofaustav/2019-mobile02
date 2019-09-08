@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
         int input = Integer.parseInt(angka);
 
         if(input == number){
-            Toast.makeText(this, "Angka Benar!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tebakan anda benar!", Toast.LENGTH_SHORT).show();
         }
         else if(input < number ){
-            Toast.makeText(this, "Angka Terlalu Kecil!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tebakan anda terlalu besar!", Toast.LENGTH_SHORT).show();
         }
         else if(input > number){
-            Toast.makeText(this, "Angka Tebakan Besar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tebakan anda terlalu kecil!", Toast.LENGTH_SHORT).show();
         }
 	}
 
