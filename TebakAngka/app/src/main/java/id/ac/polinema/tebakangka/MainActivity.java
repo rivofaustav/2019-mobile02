@@ -35,16 +35,19 @@ public class MainActivity extends AppCompatActivity {
 	public void handleGuess(View view) {
 		// TODO: Tambahkan logika untuk melakukan pengecekan angka
         String angka = numberInput.getText().toString();
-        int input = Integer.parseInt(angka);
 
-        if(input == number){
-            Toast.makeText(this, "Tebakan anda benar!", Toast.LENGTH_SHORT).show();
-        }
-        else if(input < number ){
-            Toast.makeText(this, "Tebakan anda terlalu besar!", Toast.LENGTH_SHORT).show();
-        }
-        else if(input > number){
-            Toast.makeText(this, "Tebakan anda terlalu kecil!", Toast.LENGTH_SHORT).show();
+        if (angka.matches("")) {
+            Toast.makeText(this, "Masukan angka dari 0-100!", Toast.LENGTH_SHORT).show();
+        } else {
+            int input = Integer.parseInt(angka);
+
+            if (input == number) {
+                Toast.makeText(this, "Tebakan anda benar!", Toast.LENGTH_SHORT).show();
+            } else if (input < number) {
+                Toast.makeText(this, "Tebakan anda terlalu besar!", Toast.LENGTH_SHORT).show();
+            } else if (input > number) {
+                Toast.makeText(this, "Tebakan anda terlalu kecil!", Toast.LENGTH_SHORT).show();
+            }
         }
 	}
 
