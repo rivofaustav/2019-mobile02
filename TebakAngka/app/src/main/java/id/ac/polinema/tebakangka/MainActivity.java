@@ -21,12 +21,15 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		// TODO: bind layout di sini
-
+        numberInput = findViewById(R.id.number_input);
+        initRandomNumber();
 	}
 
 	// TODO: generate angka random di sini
 	private void initRandomNumber() {
-
+        Random rand = new Random();
+        int r = rand.nextInt(50);
+        number = r;
 	}
 
 	public void handleGuess(View view) {
